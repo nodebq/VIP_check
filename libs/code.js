@@ -39,6 +39,13 @@ var code = {
     'checkFailed':{
         code:2005,
         message:"验证失败"
+    },
+    'checkPhoneFailed':{
+        code:2006,
+        message:"手机号验证失败"
     }
 
 };
+
+
+module.exports = code;
