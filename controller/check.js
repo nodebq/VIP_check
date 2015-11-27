@@ -6,7 +6,7 @@ var check = {
 
 
 check.do = function (req,res) {
-
+;
 };
 
 module.exports = check;
