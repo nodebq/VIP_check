@@ -38,13 +38,16 @@ var code = {
     },
     'checkFailed':{
         code:2005,
-        message:"验证失败"
+        message:"验证失败,请检查手机号是否为前台预留手机号"
     },
     'checkPhoneFailed':{
         code:2006,
         message:"手机号验证失败"
+    },
+    'checkSuccess':{
+        code:2007,
+        message:"验证通过，但你不是飞扬保修系统成员，请注册后再验证"
     }
-
 };
 
 

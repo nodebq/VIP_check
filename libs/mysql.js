@@ -1,22 +1,18 @@
 var Client = require('easymysql');
 var config = require('../config.js');
-
-
-
-
-var conn = null;
-
-
-var link = function () {
-    if(conn == null){
-        conn = Client.create({
+var conn1 = null;
+var conn2 = null;
+var link = {};
+link.check = function () {//连接飞扬会员基础数据
+    if(conn1 == null){
+        conn1 = Client.create({
             'maxconnections' : 10
         });
-        conn.addserver(config.mysql);
+        conn1.addserver(config.fy_vip_base);
     }else{
-        console.log('mysql is already runing');
+        console.log('mysql is already running');
     }
-    conn.on('busy', function (quemysqluesize, maxconnections, which) {
+    conn1.on('busy', function (quemysqluesize, maxconnections, which) {
         console.log('队列大小');
         console.log(quemysqluesize);
         console.log('最大连接数');
@@ -24,8 +20,26 @@ var link = function () {
         console.log('错误');
         console.log(which);
     });
-    return conn;
+    return conn1;
 };
-
-
-module.exports = link();
+link.update = function () {
+    //连接飞扬用户表
+    if(conn2 == null){
+        conn2 = Client.create({
+            'maxconnections': 10
+        });
+        conn2.addserver(config.fy_repair);
+    }else{
+        console.log('mysql is already running');
+    }
+    conn2.on('busy', function (quemysqluesize, maxconnections, which) {
+        console.log('队列大小');
+        console.log(quemysqluesize);
+        console.log('最大连接数');
+        console.log(maxconnections);
+        console.log('错误');
+        console.log(which);
+    });
+    return conn2;
+};
+module.exports = link;
