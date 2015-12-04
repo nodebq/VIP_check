@@ -47,6 +47,10 @@ var code = {
     'checkSuccess':{
         code:2007,
         message:"验证通过，但你不是飞扬保修系统成员，请注册后再验证"
+    },
+    'alreadyVip':{
+        code:2008,
+        message:"你已经是会员了"
     }
 };
 

@@ -29,61 +29,83 @@ check.do = function (req,res) {
         }, function (e, r) {
             if(e){
                 console.log(e);
+                console.log('can not access fy_VIP_base');
                 res.end(fyscu.out(code.mysqlError));
                 return;
             }else{
                 //console.log(r);
                 //console.log('success');
-                if(r.length!=0){
-                    console.log('验证通过');
+                if(r.length){
+                    console.log('check success and will update');
                     //res.send(fyscu.out(code.success));
                     //console.log('success');return;
                     conn.update().query({
-                        sql:'select user_id from fy_userextend where name =:name ',
+                        sql:'select user_id from fy_userextend where name =:name',
                         params:{
                             name: r[0].name
                         }
                     }, function (ee, rr) {
                         //console.log('select user_id from fy_userextend where name = '+r[0].name);return;
-                        if(e){
+                        if(ee){
                             console.log(ee);
+                            console.log('can not access fy_user');
                             res.end(fyscu.out(code.mysqlError));
                             return;
                         }else{
                             //查询成功userid
-                            console.log(rr[0].user_id);
+                            //console.log(rr[0].user_id);
                             if(rr[0].user_id){
                                 //res.end(fyscu.out(code.success));
                                 conn.update().query({
-                                    sql:'update fy_user set type=:type where user_id=:id',
+                                    sql:'select type from fy_user where user_id=:id',
                                     params:{
-                                        type:1,
                                         id:rr[0].user_id
                                     }
-                                }, function (eee, rrr) {
-                                    if(eee){
-                                        console.log(ee);
+                                }, function (eeee, rrrr) {
+                                    if(eeee){
+                                        console.log(eeee);
                                         res.end(fyscu.out(code.mysqlError));
                                         return;
                                     }else{
-                                        console.log('更新成功');
-                                        res.end(fyscu.out(code.success));
-                                        return;
+                                        if(rrrr[0].type){
+                                            //特殊人群
+                                            res.end(fyscu.out(code.alreadyVip));
+                                            console.log('already VIP STAFF ADMIN');
+                                            return;
+                                        }else{
+                                            //非特殊人群
+                                            conn.update().query({
+                                                sql:'update fy_user set type=:type where user_id=:id',
+                                                params:{
+                                                    type:1,
+                                                    id:rr[0].user_id
+                                                }
+                                            }, function (eee, rrr) {
+                                                if(eee){
+                                                    console.log(ee);
+                                                    res.end(fyscu.out(code.mysqlError));
+                                                    return;
+                                                }else{
+                                                    console.log('everything is good');
+                                                    res.end(fyscu.out(code.success));
+                                                    return;
+                                                }
+                                            })
+                                        }
                                     }
-                                })
+                                });
                             }else{
+                                console.log('check success but fyscu have not data');
                                 res.end(fyscu.out(code.checkSuccess));
                                 return;
                             }
-                            //todo 更新表
-
                         }
                     });
 
                     //return;
                 }else{
                     res.end(fyscu.out(code.checkFailed));
-                    console.log('验证未通过');
+                    console.log('check failed');
                     return;
                 }
             }
@@ -91,12 +113,11 @@ check.do = function (req,res) {
         //res.end(fyscu.out(code.success));
         //return;
     }else{
+        console.log('check params failed');
         res.end(fyscu.out(code.checkPhoneFailed));
         return;
     }
-
 //todo 添加log文件
-
 };
 
 module.exports = check;

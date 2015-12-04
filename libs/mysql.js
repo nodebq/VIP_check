@@ -10,7 +10,7 @@ link.check = function () {//连接飞扬会员基础数据
         });
         conn1.addserver(config.fy_vip_base);
     }else{
-        console.log('mysql is already running');
+        console.log('conn1 is already running');
     }
     conn1.on('busy', function (quemysqluesize, maxconnections, which) {
         console.log('队列大小');
@@ -30,7 +30,7 @@ link.update = function () {
         });
         conn2.addserver(config.fy_repair);
     }else{
-        console.log('mysql is already running');
+        console.log('conn2 is already running');
     }
     conn2.on('busy', function (quemysqluesize, maxconnections, which) {
         console.log('队列大小');
