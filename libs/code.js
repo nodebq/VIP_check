@@ -38,7 +38,7 @@ var code = {
     },
     'checkFailed':{
         code:2005,
-        message:"验证失败,请检查手机号是否为前台预留手机号"
+        message:"验证失败,请检查填写的信息是否正确"
     },
     'checkPhoneFailed':{
         code:2006,

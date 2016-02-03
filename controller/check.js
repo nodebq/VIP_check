@@ -1,6 +1,6 @@
 var fyscu = require('../libs/fyscu.js');
 var code = require('../libs/code.js');
-var conn = require('../libs/mysql.js')
+var conn = require('../libs/mysql.js');
 
 
 
@@ -17,6 +17,7 @@ check.do = function (req,res) {
         //console.log(req.query.phone);
         //console.log(req.query.vid);
         //console.log(req.query.gender);
+
 
         conn.check().query({
             sql:'select * from fy_vip_base where name=:name and phone=:phone and gender=:gender and vid=:vid',
@@ -118,6 +119,7 @@ check.do = function (req,res) {
         return;
     }
 //todo 添加log文件
+
 };
 
 module.exports = check;
