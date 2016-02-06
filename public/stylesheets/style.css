@@ -1,8 +1,115 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    /*padding: 50px;*/
+    color: aliceblue;
+    /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
 }
 
-a {
-  color: #00B7FF;
+body {
+    font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*#content {*/
+    /*width: 750px;*/
+    /*margin: 50px auto;*/
+    /*padding: 20px;*/
+    /*background: #FFF;*/
+    /*border: 1px solid #CCC;*/
+/*}*/
+
+h1 {
+    margin: 0;
+}
+
+hr {
+    border: none;
+    height: 1px; line-height: 1px;
+    background: #CCC;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 7px 0;
+}
+.menu {
+    height: 45px;
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    /* width and height of the menu items */
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+
+.menu ul li a {
+    /* must be postioned relative  */
+    position: relative;
+    display: block;
+    width: 110px;
+    height: 45px;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu ul li a span {
+    /* all layers will be absolute positioned */
+    position: absolute;
+    left: 0;
+    width: 110px;
+}
+
+.menu ul li a span.out {
+    top: 0px;
+}
+
+.menu ul li a span.over,
+.menu ul li a span.bg {
+    /* hide */
+    top: -45px;
+}
+
+
+/** 2nd example **/
+
+#menu2 {
+    background: #000;
+}
+
+#menu2 ul li a {
+    color: #FFF;
+}
+
+#menu2 ul li a span.over {
+    background: #FFF;
+    color: #000;
+}
+
+
+@media screen and (max-device-width: 600px){
+    #menu2{
+        display: none;
+    }
+    body{
+        background-image: none;
+    }
 }
