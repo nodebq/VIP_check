@@ -1,19 +1,25 @@
-@font-face
-{
-    font-family: fytext;
-    src: url('../font/zh.TTF')format('ttf');
-}
+/*@font-face*/
+/*{*/
+    /*font-family: fytextzh;*/
+    /*src: url('../font/zh.TTF')format('ttf');*/
+/*}*/
+/*@font-face {*/
+    /*font-family: fytexten;*/
+    /*src: url('../font/en.ttf')format('ttf');*/
+/*}*/
 html{
     height: 100%;
 }
 body {
     /*padding: 50px;*/
     color: aliceblue;
-    font: 14px fytext, "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px basic title font, "Lucida Grande", Helvetica, Arial, sans-serif;
     background-image: url("../img/bg.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-
+    font-family: fytext,"Trebuchet MS",Verdana,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
 }
 /*#cardback{*/
     /*width: 360px;*/
@@ -38,6 +44,7 @@ body {
     /*margin:0 auto;*/
 }
 #form{
+
     width: 500px;
 }
 .input{
@@ -47,12 +54,13 @@ body {
     vertical-align:middle;
     text-align:center;
     background-color: transparent;
-
+    font: 25px 幼圆;
     margin-left: auto;
     margin-right: auto;
     width: 357px;
     height: 50px;
     float: none;
+    color:#ffffff
 }
 @media screen and (max-height: 800px){
     html{
@@ -90,12 +98,12 @@ body {
         height: 100%;
     }
 }
-body {
-    font-family: "Trebuchet MS",Verdana,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-}
 
+#space{
+    min-width:100%;
+    min-height: 30%;
+    visibility:visible;
+}
 /*#content {*/
     /*width: 750px;*/
     /*margin: 50px auto;*/
@@ -144,22 +152,24 @@ p {
     /* must be postioned relative  */
     position: relative;
     display: block;
-    width: 110px;
+    width: 150px;
     height: 45px;
-    font-family: Arial;
-    font-size: 11px;
-    font-weight: bold;
+    font-family:幼圆;
+    font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+}
+#start{
+    font-size: 40px;
 }
 
 .menu ul li a span {
     /* all layers will be absolute positioned */
     position: absolute;
     left: 0;
-    width: 110px;
+    width: 150px;
 }
 .menu ul li a span.out {
     top: 0px;
