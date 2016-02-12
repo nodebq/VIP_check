@@ -13,12 +13,9 @@ html{
 body {
     /*padding: 50px;*/
     color: aliceblue;
-    font: 14px basic title font, "Lucida Grande", Helvetica, Arial, sans-serif;
     background-image: url("../img/bg.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    font-family: fytext,"Trebuchet MS",Verdana,Arial,sans-serif;
-    font-size: 14px;
     line-height: 1.6;
 }
 /*#cardback{*/
@@ -54,7 +51,8 @@ body {
     vertical-align:middle;
     text-align:center;
     background-color: transparent;
-    font: 25px 幼圆;
+    font-family: 'basic title font';
+    font-size: 26px;
     margin-left: auto;
     margin-right: auto;
     width: 357px;
@@ -201,7 +199,3 @@ p {
     background-size: 100%;
 }
 
-div
-{
-    font-family:myFirstFont;
-}
