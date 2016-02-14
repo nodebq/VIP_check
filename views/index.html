@@ -14,14 +14,15 @@
 <body>
 <div id="menu2" class="menu">
     <ul>
-        <li><a href="http://fyscu.com">飞扬官网</a></li>
-        <li><a href="http://r.fyscu.com">电脑报修</a></li>
-        <li><a href="http://lab.fyscu.com">研发实验室</a></li>
-        <li><a href="http://log.fyscu.com">术业有专攻</a></li>
-        <li><a href="http://open.fyscu.com">开放平台</a></li>
+        <li class="m"><a href="http://fyscu.com">飞扬官网</a></li>
+        <li class="m"><a href="http://r.fyscu.com">电脑报修</a></li>
+        <li class="mm"><a href="http://lab.fyscu.com">研发实验室</a></li>
+        <li class="mm"><a href="http://log.fyscu.com">术业有专攻</a></li>
+        <li class="mm"><a href="http://open.fyscu.com">开放平台</a></li>
         <a href="http://fyscu.com" id="logo"><img src="../public/img/logo7.png"></a>
     </ul>
 </div>
+
 
 
 <div id="card">
@@ -33,8 +34,16 @@
         <input type="text"  id="name" class="input" placeholder="name"></br>
         <input type="text"  id="gender" class="input" placeholder="GENDER"></br>
         <input type="text" id="phone" class="input" placeholder="phone"></br>
-        <input type="text" id="vip_num" class="input" placeholder="fynum"></br>
-        <a onclick="validate()" class="input"    id="start">一〇一 </a>
+        <input type="text" id="vip_num" class="input" placeholder="fy.no"></br>
+
+
+        <a onclick="validate()" class="input" id="start">
+
+            <div id="circle_min" >
+
+            </div>
+
+        </a>
     </form>
     <script type="text/javascript" src="../public/javascript/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="../public/javascript/index.js"></script>
