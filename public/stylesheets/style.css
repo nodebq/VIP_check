@@ -1,12 +1,11 @@
-/*@font-face*/
-/*{*/
-    /*font-family: fytextzh;*/
-    /*src: url('../font/zh.TTF')format('ttf');*/
-/*}*/
-/*@font-face {*/
-    /*font-family: fytexten;*/
-    /*src: url('../font/en.ttf')format('ttf');*/
-/*}*/
+@font-face {
+    font-family: fytextzh;
+    src: url('../font/zh.TTF') format('truetype');
+}
+@font-face {
+    font-family: fytexten;
+    src: url('../font/en.ttf') format('truetype');
+}
 html{
     height: 100%;
 }
