@@ -1,15 +1,16 @@
 /*@font-face*/
 /*{*/
-    /*font-family: fytextzh;*/
-    /*src: url('../font/zh.TTF')format('ttf');*/
+/*font-family: fytextzh;*/
+/*src: url('../font/zh.TTF')format('ttf');*/
 /*}*/
 /*@font-face {*/
-    /*font-family: fytexten;*/
-    /*src: url('../font/en.ttf')format('ttf');*/
+/*font-family: fytexten;*/
+/*src: url('../font/en.ttf')format('ttf');*/
 /*}*/
-html{
+html {
     height: 100%;
 }
+
 body {
     /*padding: 50px;*/
     /*color: aliceblue;*/
@@ -19,13 +20,21 @@ body {
     line-height: 1.6;
 }
 
+.refresh {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 30%;
+    left: 40%;
+    right: 40%;
+    margin: 0 auto;
+    float: none;
+}
 
-
-
-#card{
+#card {
     background-image: url("../img/card.png");
-    background-repeat:no-repeat ;
-    background-position:center ;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 100% 100%;
     width: 500px;
     height: 652px;
@@ -33,18 +42,20 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-#form{
+
+#form {
     width: 500px;
 }
-.input{
+
+.input {
     margin: auto auto;
     display: block;
     border: 0;
-    outline:none;
-    vertical-align:middle;
-    text-align:center;
+    outline: none;
+    vertical-align: middle;
+    text-align: center;
     background-color: transparent;
-    font-family: 'basic title font',幼圆;
+    font-family: 'basic title font', 幼圆;
     /*font-weight:bold;*/
     font-size: 35px;
 
@@ -52,18 +63,20 @@ body {
     height: 50px;
     line-height: 50px;
     float: none;
-    color:#ffffff
+    color: #ffffff
 }
-#form{
+
+#form {
     position: relative;
     top: 30%;
     width: auto;
-    height:auto;
+    height: auto;
 }
 
 h1 {
     margin: 0;
 }
+
 hr {
     border: none;
     height: 1px;
@@ -72,19 +85,23 @@ hr {
     margin-bottom: 20px;
     padding: 0;
 }
+
 p {
     margin: 0;
     padding: 7px 0;
 }
+
 .menu {
     height: 45px;
     display: block;
 }
+
 .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .menu ul li {
     /* width and height of the menu items */
     float: left;
@@ -93,13 +110,14 @@ p {
     text-align: center;
     line-height: 45px;
 }
+
 .menu ul li a {
     /* must be postioned relative  */
     position: relative;
     display: block;
     width: 150px;
     height: 45px;
-    font-family:幼圆;
+    font-family: 幼圆;
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -107,127 +125,150 @@ p {
     cursor: pointer;
 }
 
-
 .menu ul li a span {
     /* all layers will be absolute positioned */
     position: absolute;
     left: 0;
     width: 150px;
 }
+
 .menu ul li a span.out {
     top: 0;
 }
+
 .menu ul li a span.over,
 .menu ul li a span.bg {
     /* hide */
     top: -45px;
 }
+
 /** 2nd example **/
 #menu2 {
     background: #000;
 }
+
 #menu2 ul li a {
     color: #FFF;
 }
+
 #menu2 ul li a span.over {
     background: #FFF;
     color: #000;
 }
-#logo{
-    float:right;
+
+#logo {
+    float: right;
 }
-.card{
-    position:center;
+
+.card {
+    position: center;
 }
-.input:hover{
-    background-image:url("../img/inputbg.png");
+
+.input:hover {
+    background-image: url("../img/inputbg.png");
     background-size: 100%;
 }
-#circle_min:hover{
-    background: rgba(255,255,255,0.25);
+
+#circle_min:hover {
+    background: rgba(255, 255, 255, 0.25);
     /*border: 3px solid #aaa;*/
     opacity: 1;
     color: #aaa;
 }
 
-
-
-@media screen and (max-width: 915px){
-    #form{
-        top:24%;
+@media screen and (max-width: 915px) {
+    #form {
+        top: 24%;
     }
 }
 
+@media screen and (max-width: 767px) {
 
+    #refresh {
+        bottom: 20%;
+    }
 
-    @media screen and (max-width: 767px){
-
-    #menu2{
+    #menu2 {
         width: 99%;
     }
-    .m{
+
+    .m {
         width: 50%;
     }
-    .menu ul li a span{
+
+    .menu ul li a span {
         width: 100%;
     }
-    .menu ul li a{
+
+    .menu ul li a {
         width: 100%;
     }
-    .mm{
-    display: none;
+
+    .mm {
+        display: none;
     }
-    #logo{
+
+    #logo {
         display: block;
     }
-    html{
+
+    html {
         width: 100%;
         height: 100%;
     }
-    body{
+
+    body {
         width: 100%;
         height: 100%;
         background-color: #c8c8c8;
         background-image: none;
     }
-    #carder{
-        height:100%;
+
+    #carder {
+        height: 100%;
     }
-    #card{
+
+    #card {
         background-image: url("../img/card.png");
-        background-repeat:no-repeat;
-        background-position:center;
-        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         width: 100%;
         height: 100%;
     }
-    .form{
+
+    .form {
         width: 100%;
         height: 100%;
     }
-    .input{
+
+    .input {
         font-size: 3em;
         width: 90%;
-        height:50%;
+        height: 50%;
     }
-    #name{
+
+    #name {
         margin: auto auto;
         width: 100%;
     }
 }
-@media screen and (max-width: 384px){
-    #form{
-        top:20%
+
+@media screen and (max-width: 384px) {
+    #form {
+        top: 20%
     }
-    .input{
+
+    .input {
         font-size: 25px;
         width: 100%;
         height: 30px;
         line-height: 30px;
         float: none;
-        color:#ffffff
+        color: #ffffff
     }
 }
+
 #circle_min {
     border: 4px double #FFFFFF;
     left: 50%;
@@ -236,17 +277,15 @@ p {
     /*top:20%;*/
     width: 2em;
     height: 2em;
-    margin:auto auto;
+    margin: auto auto;
 }
 
-#start{
+#start {
     font-size: 26px;
     background-image: none;
 }
 
-
-
-#str_l{
+#str_l {
     background-image: url("../img/str.png");
     background-size: 100%;
     background-position: center;
@@ -257,7 +296,8 @@ p {
     left: 25%;
 
 }
-#str_r{
+
+#str_r {
     background-image: url("../img/str.png");
     background-size: 100%;
     background-position: center;
@@ -265,16 +305,16 @@ p {
     width: 18%;
     height: 15%;
     position: absolute;
-    right:25%;
+    right: 25%;
 
 }
 
-#text{
+#text {
     font-family: 幼圆;
     font-size: 2em;
     width: 10em;
     margin: auto auto;
     position: relative;
     text-align: center;
-    top:20%;
+    top: 20%;
 }
