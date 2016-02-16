@@ -42,7 +42,7 @@ var code = {
     },
     'checkPhoneFailed':{
         code:2006,
-        message:"手机号验证失败"
+        message:"参数验证失败"
     },
     'checkSuccess':{
         code:2007,

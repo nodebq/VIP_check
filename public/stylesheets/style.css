@@ -18,6 +18,10 @@ body {
     background-repeat: no-repeat;
     line-height: 1.6;
 }
+
+
+
+
 #card{
     background-image: url("../img/card.png");
     background-repeat:no-repeat ;
@@ -33,6 +37,7 @@ body {
     width: 500px;
 }
 .input{
+    margin: auto auto;
     display: block;
     border: 0;
     outline:none;
@@ -42,7 +47,7 @@ body {
     font-family: 'basic title font',幼圆;
     /*font-weight:bold;*/
     font-size: 35px;
-    margin: auto auto;
+
     width: 357px;
     height: 50px;
     line-height: 50px;
@@ -50,14 +55,12 @@ body {
     color:#ffffff
 }
 #form{
+    position: relative;
+    top: 30%;
     width: auto;
     height:auto;
 }
-#space{
-    min-width:100%;
-    min-height: 30%;
-    visibility:visible;
-}
+
 h1 {
     margin: 0;
 }
@@ -112,7 +115,7 @@ p {
     width: 150px;
 }
 .menu ul li a span.out {
-    top: 0px;
+    top: 0;
 }
 .menu ul li a span.over,
 .menu ul li a span.bg {
@@ -146,21 +149,19 @@ p {
     opacity: 1;
     color: #aaa;
 }
-@media screen and (max-height: 800px){
-    html{
-        height: 100%;
-    }
-    body{
-        height:100%;
-        /*padding: 50px;*/
-        color: aliceblue;
-        /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
-        background-image: url("../img/bg.jpg");
-        background-size: cover;
-        background-repeat: repeat-y;
+
+
+
+@media screen and (max-width: 915px){
+    #form{
+        top:24%;
     }
 }
-@media screen and (max-width: 767px){
+
+
+
+    @media screen and (max-width: 767px){
+
     #menu2{
         width: 99%;
     }
@@ -189,6 +190,9 @@ p {
         background-color: #c8c8c8;
         background-image: none;
     }
+    #carder{
+        height:100%;
+    }
     #card{
         background-image: url("../img/card.png");
         background-repeat:no-repeat;
@@ -205,6 +209,23 @@ p {
         font-size: 3em;
         width: 90%;
         height:50%;
+    }
+    #name{
+        margin: auto auto;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 384px){
+    #form{
+        top:20%
+    }
+    .input{
+        font-size: 25px;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        float: none;
+        color:#ffffff
     }
 }
 #circle_min {
@@ -224,3 +245,36 @@ p {
 }
 
 
+
+#str_l{
+    background-image: url("../img/str.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+    width: 18%;
+    height: 15%;
+    position: absolute;
+    left: 25%;
+
+}
+#str_r{
+    background-image: url("../img/str.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+    width: 18%;
+    height: 15%;
+    position: absolute;
+    right:25%;
+
+}
+
+#text{
+    font-family: 幼圆;
+    font-size: 2em;
+    width: 10em;
+    margin: auto auto;
+    position: relative;
+    text-align: center;
+    top:20%;
+}

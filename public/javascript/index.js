@@ -1,3 +1,34 @@
+
+function turnSuccess(){
+    var _this = $("#card");
+    _this.flip({
+        direction:'lr',
+        color:"RGB(128,128,128,0.001)",
+        content:text,
+        onEnd: function(text){
+            _this.css({
+                "background-image":"url(../public/img/success.png)",
+                color: 'white'
+            }).unbind('click');
+        }
+    });
+}
+function turnFailed(text){
+    var _this = $("#card");
+    _this.flip({
+        direction:'lr',
+        color:"RGB(128,128,128,0.001)",
+        content:'<div id="text">'+text+'</div>',
+        onEnd: function(){
+            _this.css({
+                "background-image":"url(../public/img/failed.png)",
+                color: 'white'
+            }).unbind('click');
+        }
+    });
+}
+
+
 function validate() {
     var name = document.getElementById("name");
     if (name.value) {
@@ -17,7 +48,13 @@ function validate() {
                     var xhr = new XMLHttpRequest();
                     xhr.open("GET", url, false);
                     xhr.send(null);
-                    alert(xhr.responseText);
+                    var jxhr = JSON.parse(xhr.responseText);
+                    if(jxhr.code==200){
+                        turnSuccess(jxhr.message);
+                    }else {
+                        turnFailed(jxhr.message);
+                    }
+                    //turn();
 
                 } else {
                     alert("不输入会员号是不行的");
@@ -57,3 +94,7 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
