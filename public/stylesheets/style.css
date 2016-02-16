@@ -1,12 +1,13 @@
-/*@font-face*/
-/*{*/
-/*font-family: fytextzh;*/
-/*src: url('../font/zh.TTF')format('ttf');*/
-/*}*/
-/*@font-face {*/
-/*font-family: fytexten;*/
-/*src: url('../font/en.ttf')format('ttf');*/
-/*}*/
+@font-face {
+    font-family: fytextzh;
+    src: url('../font/zh.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: fytexten;
+    src: url('../font/en.ttf') format('truetype');
+}
+
 html {
     height: 100%;
 }
@@ -18,59 +19,6 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     line-height: 1.6;
-}
-
-.refresh {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: 30%;
-    left: 45%;
-    right: 40%;
-    margin: 0 auto;
-    float: none;
-}
-
-#card {
-    background-image: url("../img/card.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    width: 500px;
-    height: 652px;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#form {
-    width: 500px;
-}
-
-.input {
-    margin: auto auto;
-    display: block;
-    border: 0;
-    outline: none;
-    vertical-align: middle;
-    text-align: center;
-    background-color: transparent;
-    font-family: 'basic title font', 幼圆;
-    /*font-weight:bold;*/
-    font-size: 35px;
-
-    width: 357px;
-    height: 50px;
-    line-height: 50px;
-    float: none;
-    color: #ffffff
-}
-
-#form {
-    position: relative;
-    top: 30%;
-    width: auto;
-    height: auto;
 }
 
 h1 {
@@ -117,7 +65,7 @@ p {
     display: block;
     width: 150px;
     height: 45px;
-    font-family: 幼圆;
+    font-family: fytextzh, 幼圆;
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -160,8 +108,71 @@ p {
     float: right;
 }
 
-.card {
-    position: center;
+#card {
+    background-image: url("../img/card.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 500px;
+    height: 652px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carder{
+    top:20%;
+    position: relative;
+}
+
+#Form {
+    width: 370px;
+    margin:auto auto;
+}
+
+#text {
+    font-family: fytextzh, 幼圆;
+    font-size: 2em;
+    width: 10em;
+    margin: auto auto;
+    position: relative;
+    text-align: center;
+    top: 20%;
+}
+
+.refresh {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 30%;
+    left: 45%;
+    right: 40%;
+    margin: 0 auto;
+    float: none;
+}
+
+#viptext{
+    width:50%;
+    margin:0 auto 15% auto;
+    display: block;
+    top:20%;
+    position: relative;
+}
+
+.input {
+    margin: auto auto;
+    display: block;
+    border: 0;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    font-family: 'fytexten',fytextzh;
+    font-weight:bold;
+    font-size: 35px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    position:relative;
 }
 
 .input:hover {
@@ -176,6 +187,10 @@ p {
     color: #aaa;
 }
 
+#start {
+    font-size: 26px;
+    background-image: none;
+}
 
 #circle_min {
     border: 4px double #FFFFFF;
@@ -186,11 +201,6 @@ p {
     width: 2em;
     height: 2em;
     margin: auto auto;
-}
-
-#start {
-    font-size: 26px;
-    background-image: none;
 }
 
 #str_l {
@@ -217,28 +227,18 @@ p {
 
 }
 
-#text {
-    font-family: 幼圆;
-    font-size: 2em;
-    width: 10em;
-    margin: auto auto;
-    position: relative;
-    text-align: center;
-    top: 20%;
-}
-
-
-
-@media screen and (max-width: 915px) {
-    #form {
-        top: 24%;
-    }
-}
-
 @media screen and (max-width: 767px) {
 
-    .refresh {
-        bottom: 15%;
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: #c8c8c8;
+        background-image: none;
     }
 
     #menu2 {
@@ -265,22 +265,6 @@ p {
         display: block;
     }
 
-    html {
-        width: 100%;
-        height: 100%;
-    }
-
-    body {
-        width: 100%;
-        height: 100%;
-        background-color: #c8c8c8;
-        background-image: none;
-    }
-
-    #carder {
-        height: 100%;
-    }
-
     #card {
         background-image: url("../img/card.png");
         background-repeat: no-repeat;
@@ -290,27 +274,19 @@ p {
         height: 100%;
     }
 
-    .form {
-        width: 100%;
-        height: 100%;
+    .refresh {
+        bottom: 15%;
     }
 
     .input {
         font-size: 3em;
-        width: 90%;
+        width: 80%;
         height: 50%;
     }
 
-    #name {
-        margin: auto auto;
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 384px) {
-    #form {
-        top: 20%
-    }
 
     .input {
         font-size: 25px;

@@ -5,10 +5,10 @@
     <!--&lt;!&ndash;[if lt IE 9]>-->
     <!--<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>-->
     <!--<![endif]&ndash;&gt;-->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="images/x-icon" href="../public/img/favicon.png">
     <title>飞扬俱乐部会员验证系统</title>
-    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+    <link rel='stylesheet' href='../public/stylesheets/style.css'/>
 
 </head>
 <body>
@@ -19,26 +19,27 @@
         <li class="mm"><a href="http://lab.fyscu.com">研发实验室</a></li>
         <li class="mm"><a href="http://log.fyscu.com">术业有专攻</a></li>
         <li class="mm"><a href="http://open.fyscu.com">开放平台</a></li>
-        <a href="http://fyscu.com" id="logo"><img src="../public/img/logo7.png"></a>
+        <!--<a href="http://fyscu.com" id="logo"><img src="../public/img/logo7.png"></a>-->
     </ul>
 </div>
-<div id="carder">
 <div id="card">
-    <form id="form">
-        <input type="text"  id="name" class="input" placeholder="name"></br>
-        <input type="text"  id="gender" class="input" placeholder="GENDER"></br>
-        <input type="text" id="phone" class="input" placeholder="phone"></br>
-        <input type="text" id="vip_num" class="input" placeholder="fy.no"></br>
-        <a onclick="validate()" class="input" id="start">
-            <div id="circle_min" >
-                <div id="str_l">
+    <div id="carder">
+        <form id="Form">
+            <img id="viptext" src="../public/img/viptext.png" alt="飞扬会员认证">
+            <input type="text" id="name" class="input" placeholder="NAME"></br>
+            <input type="text" id="gender" class="input" placeholder="GENDER"></br>
+            <input type="text" id="phone" class="input" placeholder="PHONE"></br>
+            <input type="text" id="vip_num" class="input" placeholder="FY.NO"></br>
+            <a onclick="validate()" class="input" id="start">
+                <div id="circle_min">
+                    <div id="str_l">
+                    </div>
+                    <div id="str_r">
+                    </div>
                 </div>
-                <div id="str_r">
-                </div>
-            </div>
-        </a>
-    </form>
-</div>
+            </a>
+        </form>
+    </div>
 </div>
 <script type="text/javascript" src="../public/javascript/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="../public/javascript/jquery-ui.min.js"></script>
