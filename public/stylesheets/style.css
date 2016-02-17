@@ -65,7 +65,7 @@ p {
     display: block;
     width: 150px;
     height: 45px;
-    font-family: fytextzh, 幼圆;
+    font-family: 幼圆;
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -143,12 +143,9 @@ p {
 .refresh {
     width: 50px;
     height: 50px;
-    position: absolute;
-    bottom: 30%;
-    left: 45%;
-    right: 40%;
-    margin: 0 auto;
-    float: none;
+    position: relative;
+    margin: 90% auto auto auto;
+    display: block;
 }
 
 #viptext{
@@ -193,7 +190,7 @@ p {
 }
 
 #circle_min {
-    border: 4px double #FFFFFF;
+    border: 7px double #FFFFFF;
     left: 50%;
     /*position: absolute;*/
     border-radius: 100%;
@@ -209,9 +206,9 @@ p {
     background-position: center;
     background-repeat: repeat-x;
     width: 18%;
-    height: 15%;
+    height: 100%;
     position: absolute;
-    left: 25%;
+    left: 20%;
 
 }
 
@@ -221,9 +218,9 @@ p {
     background-position: center;
     background-repeat: repeat-x;
     width: 18%;
-    height: 15%;
+    height: 100%;
     position: absolute;
-    right: 25%;
+    right: 20%;
 
 }
 
