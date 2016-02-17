@@ -18,10 +18,10 @@ function turnFailed(text){
     _this.flip({
         direction:'lr',
         color:"RGB(128,128,128,0.001)",
-        content:'<div id="text">'+text+'</div><img onclick="window.location.reload();" class="refresh" src="../public/img/refresh.png" alt="重新验证">',
+        content:'<div id="text">'+text+'</div><img onclick="window.location.reload();" class="refresh" src="img/refresh.png" alt="重新验证">',
         onEnd: function(){
             _this.css({
-                "background-image":"url(../public/img/failed.png)",
+                "background-image":"url(img/failed.png)",
                 color: 'white'
             }).unbind('click');
         }

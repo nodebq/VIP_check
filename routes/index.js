@@ -15,16 +15,15 @@ var check = require('../controller/check.js');
 //    next();
 //});
 
+router.get('/', function(req, res) {
+    res.render('index', { title: 'Express' });
+});
+
+
 router.get('/check', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     check.do(req,res);
 });
-
-
-
-
-
-
 
 
 module.exports = router;
