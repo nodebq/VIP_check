@@ -156,7 +156,17 @@ button {
 #Form {
     width: 370px;
     margin: auto;
+    /*text-decoration: none;*/
+    /*-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(12,169,241,1)), to(rgba(220,230,235,1)));color-stop(#0CA9F1), color-stop(#DCE6EB)*/
 }
+
+/*#inputer{*/
+    /*color: #0CA9F1;*/
+    /*text-decoration: none;*/
+    /*-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.3)));*/
+/*}*/
+
+
 
 #text {
     font-family: fytextzh, 幼圆;
@@ -199,8 +209,78 @@ button {
     font-size: 2em;
     height: 2em;
     line-height: 2em;
-    color: #ffffff;
+    color: inherit;
     position: relative;
+}
+
+
+#name::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgb(57,182,240);
+}
+#name:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(57,182,240);
+}
+#name::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(57,182,240);
+}
+#name:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgb(57,182,240);
+}
+
+#name{
+
+    color: rgb(57,182,240);
+}
+
+#gender::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgb(90,192,239);
+}
+#gender:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(90,192,239);
+}
+#gender::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(90,192,239);
+}
+#gender:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgb(90,192,239);
+}
+
+#gender{
+    color: rgb(90,192,239);
+}
+
+#phone::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgb(141,207,238);
+}
+#phone:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(141,207,238);
+}
+#phone::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(141,207,238);
+}
+#phone:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgb(141,207,238);
+}
+
+#phone{
+    color: rgb(141,207,238);
+}
+
+#vip_num::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgb(175,218,237);
+}
+#vip_num:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(175,218,237);
+}
+#vip_num::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(175,218,237);
+}
+#vip_num:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgb(175,218,237);
+}
+
+#vip_num{
+    color: rgb(175,218,237);
 }
 
 .input:hover {
