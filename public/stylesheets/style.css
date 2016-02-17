@@ -39,6 +39,11 @@ p {
     padding: 7px 0;
 }
 
+#modal-7 {
+    font-family: 'fytexten', 幼圆;
+    font-weight: bolder;
+}
+
 .menu {
     height: 45px;
     display: block;
@@ -95,6 +100,10 @@ p {
     background: #000;
 }
 
+button {
+
+}
+
 #menu2 ul li a {
     color: #FFF;
 }
@@ -148,6 +157,11 @@ p {
     width: 50%;
     margin: 0 auto 15%;
     display: block;
+}
+
+.help {
+    width: 2em;
+    float: right;
 }
 
 .input {
@@ -234,7 +248,7 @@ p {
     }
 
     .m {
-        width: 50%;
+        width: 33%;
     }
 
     .menu ul li a span {
@@ -272,6 +286,12 @@ p {
 }
 
 @media screen and (max-width: 414px) {
+    #circle_min {
+        margin: 0 auto auto;
+    }
+}
+
+@media screen and (max-width: 413px) {
 
     #carder {
         top: 20%;
@@ -319,12 +339,6 @@ p {
     }
 
     #circle_min {
-        margin: 6em auto auto;
-    }
-}
-
-@media screen and (max-width: 412px) {
-    #circle_min {
         margin: 1em auto auto;
     }
 }
@@ -336,10 +350,10 @@ p {
     }
 
     .input {
-        font-size: 1.5em;
+        font-size: 1.8em;
         width: 100%;
-        height: 1.5em;
-        line-height: 1.5em;
+        height: 1.8em;
+        line-height: 1.8em;
         float: none;
         color: #ffffff
     }
@@ -349,3 +363,27 @@ p {
     }
 
 }
+
+.dow {
+    font: 1em 'fytexten', 幼圆;
+    width: 202px;
+    height: 52px;
+    line-height: 52px;
+    background: #428bca;
+    color: #fff;
+    text-decoration: none;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition:border-radius 0.5s,background 0.5s;
+    -moz-transition:border-radius 0.5s,background 0.5s; /* Firefox 4 */
+    -webkit-transition:border-radius 0.5s,background 0.5s; /* Safari and Chrome */
+    -o-transition:border-radius 0.5s;,background 0.5s /* Opera */
+}
+
+.dow:hover
+{
+    border-radius: 0;
+    background: #47abef;
+}
+

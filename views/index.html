@@ -8,10 +8,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="images/x-icon" href="../public/img/favicon.png">
     <title>飞扬俱乐部会员验证系统</title>
+    <link rel="stylesheet" href="../public/stylesheets/component.css">
     <link rel='stylesheet' href='../public/stylesheets/style.css'>
 
 </head>
 <body>
+<div class="md-modal md-effect-7" id="modal-7">
+    <div class="md-content">
+        <h3>会员认证系统</h3>
+
+        <div>
+            <p>流程:依次填写姓名、性别、手机号(申请加入会员时前台预留手机号)、飞扬会员号(飞扬会员卡上的编号),点击按钮开始验证</p>
+            <ul>
+                <li><strong>1:</strong> 验证成功即可享受飞扬会员福利。
+                </li>
+                <li><strong>2:</strong> 如果:<br>I.不记得相关信息<br>II.注册报修系统时的手机号不是前台预留手机号<br>III.信息正确依旧验证失败<br>
+                    则可联系管理员<br>QQ:471597503<br>PHONE:18084814782<br>或发邮件到QQ邮箱进行人工验证。
+                </li>
+                <li><strong>3:</strong> 如果有其他问题,也可由上述联系方式联系管理员,我们会尽快给您答复。</li>
+            </ul>
+            <button class="md-close dow">我知道了,开始认证</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+
+</div>
+
 <div id="menu2" class="menu">
     <ul>
         <li class="m"><a href="http://fyscu.com">飞扬官网</a></li>
@@ -19,7 +43,7 @@
         <li class="mm"><a href="http://lab.fyscu.com">研发实验室</a></li>
         <li class="mm"><a href="http://log.fyscu.com">术业有专攻</a></li>
         <li class="mm"><a href="http://open.fyscu.com">开放平台</a></li>
-        <!--<a href="http://fyscu.com" class="logo"><img src="../public/img/logo7.png"></a>-->
+        <li class="m"><a class="md-trigger help" data-modal="modal-7">帮助</a></li>
     </ul>
 </div>
 <div id="card">
@@ -41,23 +65,13 @@
         </form>
     </div>
 </div>
-<div class="md-modal md-effect-7" id="modal-7">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
+
+<script type="text/javascript" src="../public/javascript/classie.js"></script>
+<script type="text/javascript" src="../public/javascript/modalEffects.js"></script>
 <script type="text/javascript" src="../public/javascript/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="../public/javascript/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../public/javascript/index.js"></script>
 <script type="text/javascript" src="../public/javascript/jquery.flip.min.js"></script>
+
 </body>
 </html>
