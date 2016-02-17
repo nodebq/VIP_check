@@ -38,15 +38,15 @@ var code = {
     },
     'checkFailed':{
         code:2005,
-        message:"验证失败,请检查填写的信息是否正确"
+        message:"认证失败"
     },
     'checkPhoneFailed':{
         code:2006,
-        message:"参数验证失败"
+        message:"信息输入有误"
     },
     'checkSuccess':{
         code:2007,
-        message:"验证通过，但你不是飞扬保修系统成员，请注册后再验证"
+        message:"认证通过，但你不是飞扬保修系统成员，请注册后再验证"
     },
     'alreadyVip':{
         code:2008,

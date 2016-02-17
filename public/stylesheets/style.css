@@ -120,14 +120,14 @@ p {
     margin-right: auto;
 }
 
-#carder{
-    top:20%;
+#carder {
+    top: 20%;
     position: relative;
 }
 
 #Form {
     width: 370px;
-    margin:auto auto;
+    margin: auto auto;
 }
 
 #text {
@@ -148,12 +148,10 @@ p {
     display: block;
 }
 
-#viptext{
-    width:50%;
-    margin:0 auto 15% auto;
+#viptext {
+    width: 50%;
+    margin: 0 auto 15% auto;
     display: block;
-    top:20%;
-    position: relative;
 }
 
 .input {
@@ -163,13 +161,13 @@ p {
     outline: none;
     text-align: center;
     background-color: transparent;
-    font-family: 'fytexten',fytextzh;
-    font-weight:bold;
-    font-size: 35px;
-    height: 40px;
-    line-height: 40px;
+    font-family: 'fytexten', fytextzh;
+    font-weight: bold;
+    font-size: 2em;
+    height: 2em;
+    line-height: 2em;
     color: #ffffff;
-    position:relative;
+    position: relative;
 }
 
 .input:hover {
@@ -191,13 +189,10 @@ p {
 
 #circle_min {
     border: 7px double #FFFFFF;
-    left: 50%;
-    /*position: absolute;*/
     border-radius: 100%;
-    /*top:20%;*/
     width: 2em;
     height: 2em;
-    margin: auto auto;
+    margin: 1em auto auto auto;
 }
 
 #str_l {
@@ -268,11 +263,12 @@ p {
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     .refresh {
-        bottom: 15%;
+        bottom: 0;
+        margin: 40em auto auto auto;
     }
 
     .input {
@@ -283,14 +279,81 @@ p {
 
 }
 
-@media screen and (max-width: 384px) {
+@media screen and (max-width: 414px) {
+
+    #carder {
+        top: 20%;
+        width: 80%;
+        margin: auto;
+    }
+
+    #Form {
+        width: 100%;
+    }
+
+    #viptext {
+        width: 50%;
+        margin: 0 auto 10% auto;
+    }
 
     .input {
-        font-size: 25px;
+        font-size: 2em;
         width: 100%;
-        height: 30px;
-        line-height: 30px;
+        height: 2em;
+        line-height: 2em;
         float: none;
         color: #ffffff
     }
+
+    #start {
+        font-size: 0.7em;
+    }
+
+    #str_l {
+        height: 1.5em;
+    }
+
+    #str_r {
+        height: 1.5em;
+    }
+
+    #text {
+        font-size: 1.5em;
+    }
+
+    .refresh {
+        bottom: 0;
+        margin: 28em auto auto auto;
+    }
+
+    #circle_min {
+        margin: 6em auto auto auto;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    #circle_min {
+        margin: 1em auto auto auto;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .refresh {
+        bottom: 0;
+        margin: 90% auto auto auto;
+    }
+
+    .input {
+        font-size: 1.5em;
+        width: 100%;
+        height: 1.5em;
+        line-height: 1.5em;
+        float: none;
+        color: #ffffff
+    }
+
+    #circle_min {
+        margin: 2em auto auto auto;
+    }
+
 }
