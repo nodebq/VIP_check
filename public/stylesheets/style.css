@@ -19,6 +19,7 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     line-height: 1.6;
+    overflow: scroll;
 }
 
 h1 {
@@ -42,6 +43,28 @@ p {
 #modal-7 {
     font-family: 'fytexten', 幼圆;
     font-weight: bolder;
+}
+
+.dow {
+    font: 1em 'fytexten', 幼圆;
+    width: 202px;
+    height: 52px;
+    line-height: 52px;
+    background: #428bca;
+    color: #fff;
+    text-decoration: none;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: border-radius 0.5s, background 0.5s;
+    -moz-transition: border-radius 0.5s, background 0.5s; /* Firefox 4 */
+    -webkit-transition: border-radius 0.5s, background 0.5s; /* Safari and Chrome */
+    -o-transition: border-radius 0.5s;, background 0.5 s /* Opera */
+}
+
+.dow:hover {
+    border-radius: 0;
+    background: #47abef;
 }
 
 .menu {
@@ -244,7 +267,7 @@ button {
     }
 
     #menu2 {
-        width: 99%;
+        width: 96%;
     }
 
     .m {
@@ -344,6 +367,12 @@ button {
 }
 
 @media screen and (max-width: 384px) {
+    .md-content > div{
+        padding: 5px 15px 10px;
+        font-weight: 100;
+        font-size: 0.75em;
+    }
+
     .refresh {
         bottom: 0;
         margin: 90% auto auto;
@@ -364,26 +393,4 @@ button {
 
 }
 
-.dow {
-    font: 1em 'fytexten', 幼圆;
-    width: 202px;
-    height: 52px;
-    line-height: 52px;
-    background: #428bca;
-    color: #fff;
-    text-decoration: none;
-    border: 0;
-    border-radius: 15px;
-    cursor: pointer;
-    transition:border-radius 0.5s,background 0.5s;
-    -moz-transition:border-radius 0.5s,background 0.5s; /* Firefox 4 */
-    -webkit-transition:border-radius 0.5s,background 0.5s; /* Safari and Chrome */
-    -o-transition:border-radius 0.5s;,background 0.5s /* Opera */
-}
-
-.dow:hover
-{
-    border-radius: 0;
-    background: #47abef;
-}
 
