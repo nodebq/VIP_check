@@ -123,14 +123,14 @@ p {
 
 #Form {
     width: 370px;
-    margin: auto auto;
+    margin: auto;
 }
 
 #text {
     font-family: fytextzh, 幼圆;
     font-size: 2em;
     width: 10em;
-    margin: auto auto;
+    margin: auto;
     position: relative;
     text-align: center;
     top: 20%;
@@ -140,18 +140,18 @@ p {
     width: 50px;
     height: 50px;
     position: relative;
-    margin: 90% auto auto auto;
+    margin: 90% auto auto;
     display: block;
 }
 
 #viptext {
     width: 50%;
-    margin: 0 auto 15% auto;
+    margin: 0 auto 15%;
     display: block;
 }
 
 .input {
-    margin: auto auto;
+    margin: auto;
     display: block;
     border: 0;
     outline: none;
@@ -188,7 +188,7 @@ p {
     border-radius: 100%;
     width: 2em;
     height: 2em;
-    margin: 1em auto auto auto;
+    margin: 1em auto auto;
 }
 
 #str_l {
@@ -260,7 +260,7 @@ p {
 
     .refresh {
         bottom: 0;
-        margin: 40em auto auto auto;
+        margin: 40em auto auto;
     }
 
     .input {
@@ -285,7 +285,7 @@ p {
 
     #viptext {
         width: 50%;
-        margin: 0 auto 10% auto;
+        margin: 0 auto 10%;
     }
 
     .input {
@@ -315,24 +315,24 @@ p {
 
     .refresh {
         bottom: 0;
-        margin: 28em auto auto auto;
+        margin: 28em auto auto;
     }
 
     #circle_min {
-        margin: 6em auto auto auto;
+        margin: 6em auto auto;
     }
 }
 
 @media screen and (max-width: 412px) {
     #circle_min {
-        margin: 1em auto auto auto;
+        margin: 1em auto auto;
     }
 }
 
 @media screen and (max-width: 384px) {
     .refresh {
         bottom: 0;
-        margin: 90% auto auto auto;
+        margin: 90% auto auto;
     }
 
     .input {
@@ -345,7 +345,7 @@ p {
     }
 
     #circle_min {
-        margin: 2em auto auto auto;
+        margin: 2em auto auto;
     }
 
 }
