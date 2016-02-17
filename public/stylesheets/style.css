@@ -104,10 +104,6 @@ p {
     color: #000;
 }
 
-#logo {
-    float: right;
-}
-
 #card {
     background-image: url("../img/card.png");
     background-repeat: no-repeat;
@@ -251,10 +247,6 @@ p {
 
     .mm {
         display: none;
-    }
-
-    #logo {
-        display: block;
     }
 
     #card {
