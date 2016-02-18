@@ -4,10 +4,10 @@ function turnSuccess(){
     _this.flip({
         direction:'lr',
         color:"RGB(128,128,128,0.001)",
-        content:text,
+        content:' ',
         onEnd: function(text){
             _this.css({
-                "background-image":"url(../public/img/success.png)",
+                "background-image":"url(img/success.png)",
                 color: 'white'
             }).unbind('click');
         }
@@ -49,7 +49,7 @@ function validate() {
                     xhr.open("GET", url, false);
                     xhr.send(null);
                     var jxhr = JSON.parse(xhr.responseText);
-                    if(jxhr.code==200){
+                    if(jxhr.code==200||jxhr.code==2008){
                         turnSuccess(jxhr.message);
                     }else {
                         turnFailed(jxhr.message);
