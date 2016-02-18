@@ -31,7 +31,7 @@ check.do = function (req,res) {
         }, function (e, r) {
             if(e){
                 console.log(e);
-                console.log('can not access fy_VIP_base');
+                console.log('can not access fy_vip_base');
                 res.end(fyscu.out(code.mysqlError));
                 return;
             }else{

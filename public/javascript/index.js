@@ -111,7 +111,7 @@ function createCORSRequest(method, url) {
         console.log("failed");
     }
     xhr.open(method, url, false);
-    xhr.send(null);
+    xhr.send();
     if(xhr.responseText){
         return xhr.responseText;
     }else {
