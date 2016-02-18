@@ -1,11 +1,21 @@
 @font-face {
-    font-family: fytextzh;
-    src: url('../font/zh.TTF') format('truetype');
+    font-family: 'fytextzh';
+    src: url('../font/zh.eot');
+    src: local('fytextzh Regular'),
+    local('fytextzh'),
+    url('../font/zh.woff') format('woff'),
+    url('../font/zh.ttf') format('truetype'),
+    url('../font/zh.svg#fontName') format('svg');
 }
 
 @font-face {
-    font-family: fytexten;
-    src: url('../font/en.ttf') format('truetype');
+    font-family: 'fytexten';
+    src: url('../font/en.eot');
+    src: local('fytexten Regular'),
+    local('fytexten'),
+    url('../font/en.woff') format('woff'),
+    url('../font/en.ttf') format('truetype'),
+    url('../font/en.svg#fontName') format('svg');
 }
 
 html {
