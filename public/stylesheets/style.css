@@ -413,8 +413,7 @@ button {
     .input {
         font-size: 2em;
         width: 80%;
-        height: 4em;
-        line-height: 4em;
+        height: 50%;
     }
 
 }
