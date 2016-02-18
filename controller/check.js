@@ -10,6 +10,7 @@ var check = {
 
 
 check.do = function (req,res) {
+    console.log(req.query.name);
 
     if(req.query.name&&req.query.phone.length==11&&req.query.vip_num&&(req.query.gender==1||req.query.gender==0)){
 

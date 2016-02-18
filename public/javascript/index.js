@@ -43,14 +43,11 @@ function validate() {
                 var vip_num = document.getElementById("vip_num");
                 if (vip_num.value) {
                     //验证成功
-                    var url = "http://127.0.0.1:19410/check?name=" + name.value + "&gender=" + gender.value + "&phone=" + phone.value + "&vip_num=" + vip_num.value;
-
-
+                    var Name = encodeURIComponent(name.value);
+                    var url = "http://127.0.0.1:19410/check?name=" + Name + "&gender=" + gender.value + "&phone=" + phone.value + "&vip_num=" + vip_num.value;
+                    console.log(url);
                     var xhrRes = createCORSRequest('GET', url);
-                    
                     console.log(xhrRes);
-
-
                     var jxhr = JSON.parse(xhrRes);
                     if (jxhr.code == 200 || jxhr.code == 2008) {
                         turnSuccess(jxhr.message);
@@ -101,6 +98,7 @@ $(document).ready(function () {
 
 function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
+    console.log(url);
     if ("withCredentials" in xhr) {
 // 此时即支持CORS的情况
 // 检查XMLHttpRequest对象是否有“withCredentials”属性
@@ -114,6 +112,9 @@ function createCORSRequest(method, url) {
     }
     xhr.open(method, url, false);
     xhr.send(null);
-    return xhr.responseText;
-
+    if(xhr.responseText){
+        return xhr.responseText;
+    }else {
+        return {"code":1005,"message":"不支持xhr,请更换更新版本的浏览器"}
+    }
 }

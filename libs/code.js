@@ -20,6 +20,10 @@ var code = {
         code:1004,
         message:"请求错误"
     },
+    'cannotSupportAjax':{
+        code:1005,
+        message:"不支持xhr对象"
+    },
     'loginError':{
         code:2001,
         message:"并未获取授权"
