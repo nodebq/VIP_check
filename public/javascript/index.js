@@ -44,7 +44,7 @@ function validate() {
                 if (vip_num.value) {
                     //验证成功
                     var Name = encodeURIComponent(name.value);
-                    var url = "http://127.0.0.1:19410/check?name=" + Name + "&gender=" + gender.value + "&phone=" + phone.value + "&vip_num=" + vip_num.value;
+                    var url = "http://203.195.164.179:19410/check?name=" + Name + "&gender=" + gender.value + "&phone=" + phone.value + "&vip_num=" + vip_num.value;
                     console.log(url);
                     var xhrRes = createCORSRequest('GET', url);
                     console.log(xhrRes);
