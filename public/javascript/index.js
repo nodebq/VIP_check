@@ -1,27 +1,26 @@
-
-function turnSuccess(){
+function turnSuccess() {
     var _this = $("#card");
     _this.flip({
-        direction:'lr',
-        color:"RGB(128,128,128,0.001)",
-        content:' ',
-        onEnd: function(text){
+        direction: 'lr',
+        color: "RGB(128,128,128,0.001)",
+        content: ' ',
+        onEnd: function (text) {
             _this.css({
-                "background-image":"url(img/success.png)",
+                "background-image": "url(img/success.png)",
                 color: 'white'
             }).unbind('click');
         }
     });
 }
-function turnFailed(text){
+function turnFailed(text) {
     var _this = $("#card");
     _this.flip({
-        direction:'lr',
-        color:"RGB(128,128,128,0.001)",
-        content:'<div id="text">'+text+'</div><img onclick="window.location.reload();" class="refresh" src="img/refresh.png" alt="重新验证">',
-        onEnd: function(){
+        direction: 'lr',
+        color: "RGB(128,128,128,0.001)",
+        content: '<div id="text">' + text + '</div><img onclick="window.location.reload();" class="refresh" src="img/refresh.png" alt="重新验证">',
+        onEnd: function () {
             _this.css({
-                "background-image":"url(img/failed.png)",
+                "background-image": "url(img/failed.png)",
                 color: 'white'
             }).unbind('click');
         }
@@ -45,13 +44,17 @@ function validate() {
                 if (vip_num.value) {
                     //验证成功
                     var url = "http://127.0.0.1:19410/check?name=" + name.value + "&gender=" + gender.value + "&phone=" + phone.value + "&vip_num=" + vip_num.value;
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("GET", url, false);
-                    xhr.send(null);
-                    var jxhr = JSON.parse(xhr.responseText);
-                    if(jxhr.code==200||jxhr.code==2008){
+
+
+                    var xhrRes = createCORSRequest('GET', url);
+                    
+                    console.log(xhrRes);
+
+
+                    var jxhr = JSON.parse(xhrRes);
+                    if (jxhr.code == 200 || jxhr.code == 2008) {
                         turnSuccess(jxhr.message);
-                    }else {
+                    } else {
                         turnFailed(jxhr.message);
                     }
                     //turn();
@@ -96,3 +99,21 @@ $(document).ready(function () {
 });
 
 
+function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+// 此时即支持CORS的情况
+// 检查XMLHttpRequest对象是否有“withCredentials”属性
+// “withCredentials”仅存在于XMLHTTPRequest level 2对象里
+        console.log("success");
+    } else {
+// 否则检查是否支持XDomainRequest
+// XDomainRequest仅存在于IE中，是IE用于支持CORS请求的方式
+        xhr = new XDomainRequest();
+        console.log("failed");
+    }
+    xhr.open(method, url, false);
+    xhr.send(null);
+    return xhr.responseText;
+
+}

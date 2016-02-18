@@ -51,12 +51,12 @@ p {
 }
 
 #modal-7 {
-    font-family: 'fytexten', 幼圆;
+    font-family: 'fytexten', 幼圆,fytextzh;
     font-weight: bolder;
 }
 
 .dow {
-    font: 1em 'fytexten', 幼圆;
+    font: 1em 'fytexten', 幼圆,fytextzh;
     width: 202px;
     height: 52px;
     line-height: 52px;
@@ -103,7 +103,7 @@ p {
     display: block;
     width: 150px;
     height: 45px;
-    font-family: 幼圆;
+    font-family: 幼圆,fytextzh;
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -177,7 +177,7 @@ button {
 /*}*/
 
 #text {
-    font-family: fytextzh, 幼圆;
+    font-family: fytextzh, 幼圆,fytextzh;
     font-size: 2em;
     width: 10em;
     margin: auto;
@@ -414,6 +414,7 @@ button {
         font-size: 2em;
         width: 80%;
         height: 50%;
+        line-height: 50%;
     }
 
 }
