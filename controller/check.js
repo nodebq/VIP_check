@@ -56,7 +56,7 @@ check.do = function (req,res) {
                         }else{
                             //查询成功userid
                             //console.log(rr[0].user_id);
-                            if(rr[0].length){
+                            if(rr.length){
                                 //res.end(fyscu.out(code.success));
                                 conn.update().query({
                                     sql:'select type from fy_user where user_id=:id',
