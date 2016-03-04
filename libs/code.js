@@ -50,11 +50,11 @@ var code = {
     },
     'checkSuccess':{
         code:2007,
-        message:"认证通过"
+        message:"您并不是报修系统成员"
     },
     'alreadyVip':{
         code:2008,
-        message:"你已经是会员了"
+        message:"您已经是会员了"
     }
 };
 
