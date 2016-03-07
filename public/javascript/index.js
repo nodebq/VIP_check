@@ -118,3 +118,8 @@ function createCORSRequest(method, url) {
         return {"code":1005,"message":"不支持xhr,请更换更新版本的浏览器"}
     }
 }
+
+
+window.onload = function() {
+    document.getElementById("md").click();
+};

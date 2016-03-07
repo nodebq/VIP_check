@@ -1,12 +1,12 @@
-@font-face {
-    font-family: 'fytextzh';
-    src: url('../font/zh.eot');
-    src: local('fytextzh Regular'),
-    local('fytextzh'),
-    url('../font/zh.woff') format('woff'),
-    url('../font/zh.ttf') format('truetype'),
-    url('../font/zh.svg#fontName') format('svg');
-}
+/*@font-face {*/
+    /*font-family: 'fytextzh';*/
+    /*src: url('../font/zh.eot');*/
+    /*src: local('fytextzh Regular'),*/
+    /*local('fytextzh'),*/
+    /*url('../font/zh.woff') format('woff'),*/
+    /*url('../font/zh.ttf') format('truetype'),*/
+    /*url('../font/zh.svg#fontName') format('svg');*/
+/*}*/
 
 @font-face {
     font-family: 'fytexten';
