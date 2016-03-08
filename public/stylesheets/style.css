@@ -112,7 +112,7 @@
 /*}*/
 
 @font-face {
-    font-family: 'fytexten',幼圆;
+    font-family: 'fytexten';
     src: url('../font/en.eot');
     src: local('fytexten Regular'),
     local('fytexten'),
@@ -122,6 +122,7 @@
 }
 
 html {
+    font-family: 'fytexten', 幼圆;
     height: 100%;
 }
 
@@ -154,12 +155,12 @@ p {
 }
 
 #modal-7 {
-    font-family: 'fytexten', 幼圆,fytextzh;
+    font-family: 'fytexten', 幼圆;
     font-weight: bolder;
 }
 
 .dow {
-    font: 1em 'fytexten', 幼圆,fytextzh;
+    font: 1em 'fytexten', 幼圆;
     width: 202px;
     height: 52px;
     line-height: 52px;
@@ -206,7 +207,7 @@ p {
     display: block;
     width: 150px;
     height: 45px;
-    font-family: 幼圆,fytextzh;
+    font-family: 幼圆;
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
