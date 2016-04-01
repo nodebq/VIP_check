@@ -116,7 +116,7 @@ check.do = function (req,res) {
         //return;
     }else{
         console.log('check params failed');
-        res.end(fyscu.out(code.checkPhoneFailed));
+        res.end(fyscu.out(code.paramError));
         return;
     }
 //todo 添加log文件

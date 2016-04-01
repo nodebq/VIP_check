@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var check = require('../controller/check.js');
+var new2016 = require('../controller/new.js');
 
 /* GET home page. */
 
@@ -23,6 +24,11 @@ router.get('/', function(req, res) {
 router.get('/check', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     check.do(req,res);
+});
+
+router.get('/new', function (req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
+    new2016.do(req,res);
 });
 
 
