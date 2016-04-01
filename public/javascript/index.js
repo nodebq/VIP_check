@@ -17,7 +17,7 @@ function turnFailed(text) {
     _this.flip({
         direction: 'lr',
         color: "RGB(128,128,128,0.001)",
-        content: '<div id="text">' + text + '</div><img onclick="window.location.reload();" class="refresh" src="img/refresh.png" alt="重新验证">',
+        content: '<div id="text">' + text + '</div>',//<img onclick="window.location.reload();" class="refresh" src="img/refresh.png" alt="重新验证">
         onEnd: function () {
             _this.css({
                 "background-image": "url(img/failed.png)",
@@ -44,7 +44,7 @@ function validate() {
                 if (vip_num.value) {
                     //验证成功
                     var Name = encodeURIComponent(name.value);
-                    var url = "http://203.195.164.179:19410/check?name=" + Name + "&gender=" + gender.value + "&phone=" + phone.value + "&vip_num=" + vip_num.value;
+                    var url = "http://localhost:19410/check?name=" + Name + "&gender=" + gender.value + "&phone=" + phone.value + "&vip_num=" + vip_num.value;
                     console.log(url);
                     var xhrRes = createCORSRequest('GET', url);
                     console.log(xhrRes);
