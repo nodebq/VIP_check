@@ -82,29 +82,8 @@ new2016.select = function (req, res) {
                 res.end(fyscu.out(code.mysqlError));
                 return;
             }else{
-                var data = [];
-                var item = {};
-                abc(0);
-                function abc(i) {
-                    //console.log(i);
-                    //console.log(r[i]);
-                    item.id = r[i].id;
-                    item.name = r[i].name;
-                    item.from = r[i].from;
-                    item.phone = r[i].phone;
-                    item.gender = r[i].gender;
-                    item.other = r[i].other;
-                    item.year = r[i].year;
-                    data.push(item);
-                    //console.log(data);
-                    if(i < r.length-1){
-                        i++;
-                        abc(i);
-                    }
-                    return;
-                }
-                //console.log(data);
-                res.end(fyscu.out(data));
+
+                res.end(fyscu.out(r));
                 return;
             }
         })
