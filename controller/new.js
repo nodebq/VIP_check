@@ -1,6 +1,7 @@
 var fyscu = require('../libs/fyscu.js');
 var code = require('../libs/code.js');
 var conn = require('../libs/mysql.js');
+var config = require('../config.js');
 
 
 var new2016 = {
@@ -71,6 +72,47 @@ new2016.do = function (req, res) {
 };
 
 
+new2016.select = function (req, res) {
+    if(req.query.a == config.selectAction&&req.query.b == config.selectActionDo){
+        conn.new().query({
+            sql:'select * from fy_2016'
+        }, function (e, r) {
+            if(e){
+                console.log(e);
+                res.end(fyscu.out(code.mysqlError));
+                return;
+            }else{
+                var data = [];
+                var item = {};
+                abc(0);
+                function abc(i) {
+                    //console.log(i);
+                    //console.log(r[i]);
+                    item.id = r[i].id;
+                    item.name = r[i].name;
+                    item.from = r[i].from;
+                    item.phone = r[i].phone;
+                    item.gender = r[i].gender;
+                    item.other = r[i].other;
+                    item.year = r[i].year;
+                    data.push(item);
+                    //console.log(data);
+                    if(i < r.length-1){
+                        i++;
+                        abc(i);
+                    }
+                    return;
+                }
+                //console.log(data);
+                res.end(fyscu.out(data));
+                return;
+            }
+        })
+
+    }else{
+        res.end(fyscu.out(code.success));
+    }
+};
 
 
 
@@ -81,6 +123,4 @@ new2016.do = function (req, res) {
 
 
 
-
-
-    module.exports = new2016;
+module.exports = new2016;

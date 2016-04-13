@@ -31,5 +31,9 @@ router.get('/new', function (req, res) {
     new2016.do(req,res);
 });
 
+router.get('/select', function (req, res) {
+    //res.header("Access-Control-Allow-Origin","*");
+    new2016.select(req,res);
+});
 
 module.exports = router;
