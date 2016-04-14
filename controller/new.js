@@ -95,11 +95,11 @@ new2016.select = function (req, res) {
 
 
 new2016.getUserInfo = function (req, res) {
-    if(req.query.userId){
+    if(req.query.id){
         conn.new().query({
-            sql:'select * from fy_2016 where id=:userId',
+            sql:'select * from fy_2016 where id=:id',
             params:{
-                userId:req.query.userId
+                id:req.query.id
             }
         }, function (e, r) {
             if(e){
@@ -119,14 +119,14 @@ new2016.getUserInfo = function (req, res) {
 
 
 new2016.updateEvaluation = function (req, res) {
-    if(req.query.userId&&(req.query.presence==0||req.query.presence==1||req.query.presence==1)){
+    if(req.query.id&&(req.query.presence==0||req.query.presence==1||req.query.presence==1)){
         if(!req.query.evaluation){
             req.query.evaluation = ''
         }
         conn.new().query({
             sql:'update fy_2016 set evaluation=:evaluation,presence=:presence where id=:id',
             params:{
-                id:req.query.userId,
+                id:req.query.id,
                 evaluation:req.query.evaluation,
                 presence:req.query.presence
             }
