@@ -107,7 +107,7 @@ new2016.getUserInfo = function (req, res) {
                 res.end(fyscu.out(code.mysqlError));
                 return;
             }else{
-                res.end(fyscu.out(r));
+                res.end(fyscu.out(r[0]));
                 return;
             }
         })
