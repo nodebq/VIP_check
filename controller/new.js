@@ -119,15 +119,16 @@ new2016.getUserInfo = function (req, res) {
 
 
 new2016.updateEvaluation = function (req, res) {
-    if(req.query.userId){
+    if(req.query.userId&&(req.query.presence==0||req.query.presence==1||req.query.presence==1)){
         if(!req.query.evaluation){
             req.query.evaluation = ''
         }
         conn.new().query({
-            sql:'update fy_2016 set evaluation=:evaluation where id=:id',
+            sql:'update fy_2016 set evaluation=:evaluation,presence=:presence where id=:id',
             params:{
                 id:req.query.userId,
-                evaluation:req.query.evaluation
+                evaluation:req.query.evaluation,
+                presence:req.query.presence
             }
         }, function (e, r) {
             if(e){

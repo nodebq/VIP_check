@@ -39,11 +39,11 @@ router.get('/api/userInfo', function (req, res) {
     res.header("Access-Control-Allow-Origin","*");
     new2016.getUserInfo(req,res);
 });
-router.put('/api/userInfo', function (req, res) {
+router.get('/api/evaluation', function (req, res) {
     res.header("Access-Control-Allow-Origin","*");
     new2016.updateEvaluation(req,res);
 });
-router.put('/checkIn', function (req, res) {
+router.get('/checkIn', function (req, res) {
     res.header("Access-Control-Allow-Origin","*");
     new2016.checkIn(req,res);
 });
