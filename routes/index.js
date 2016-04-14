@@ -36,15 +36,15 @@ router.get('/api/user', function (req, res) {
     new2016.select(req,res);
 });
 router.get('/api/userInfo', function (req, res) {
-    res.header("Access-Control_Allow-Origin","*");
+    res.header("Access-Control-Allow-Origin","*");
     new2016.getUserInfo(req,res);
 });
 router.put('/api/userInfo', function (req, res) {
-    res.header("Access-Control_Allow-Origin","*");
+    res.header("Access-Control-Allow-Origin","*");
     new2016.updateEvaluation(req,res);
 });
 router.put('/checkIn', function (req, res) {
-    res.header("Access-Control_Allow-Origin","*");
+    res.header("Access-Control-Allow-Origin","*");
     new2016.checkIn(req,res);
 });
 

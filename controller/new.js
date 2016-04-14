@@ -75,7 +75,7 @@ new2016.do = function (req, res) {
 new2016.select = function (req, res) {
     if(1){
         conn.new().query({
-            sql:'select `id`,`name`,`gender`,`phone`,`from`,`year`,`presence`,`score` from fy_2016'
+            sql:'select `id`,`name`,`gender`,`phone`,`from`,`year`,`presence`,`score` from fy_2016 order by `presence` desc'
         }, function (e, r) {
             if(e){
                 console.log(e);
@@ -162,7 +162,7 @@ new2016.checkIn = function (req, res) {
                 if(r.length){
                     if(r[0].presence==0){
                         conn.new().query({
-                            sql:'update fy_2016 set presence=1 where name=:name and phone=:phone',
+                            sql:'update fy_2016 set presence=2 where name=:name and phone=:phone',
                             params:{
                                 name:req.query.name,
                                 phone:req.query.phone
