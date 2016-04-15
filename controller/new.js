@@ -8,6 +8,7 @@ var new2016 = {
     name : '招新报名接口'
 };
 
+
 new2016.do = function (req, res) {
     //console.log(req.query);
     
@@ -119,7 +120,7 @@ new2016.getUserInfo = function (req, res) {
 
 
 new2016.updateEvaluation = function (req, res) {
-    if(req.query.id&&(req.query.presence==0||req.query.presence==1||req.query.presence==1)){
+    if(req.query.id&&(req.query.presence==0||req.query.presence==1||req.query.presence==2)){
         if(!req.query.evaluation){
             req.query.evaluation = ''
         }
@@ -147,6 +148,7 @@ new2016.updateEvaluation = function (req, res) {
 
 
 new2016.checkIn = function (req, res) {
+    console.log(req.query.name&&req.query.phone);
     if(req.query.name&&req.query.phone){
         conn.new().query({
             sql:'select presence from fy_2016 where name=:name and phone=:phone',
@@ -188,5 +190,6 @@ new2016.checkIn = function (req, res) {
         return;
     }
 };
+
 
 module.exports = new2016;
