@@ -124,12 +124,18 @@ new2016.updateEvaluation = function (req, res) {
         if(!req.query.evaluation){
             req.query.evaluation = ''
         }
+        if(!req.query.score){
+            var sql = 'update fy_2016 set evaluation=:evaluation,presence=:presence where id=:id'
+        }else {
+            var sql = 'update fy_2016 set evaluation=:evaluation,presence=:presence,score=:score where id=:id'
+        }
         conn.new().query({
-            sql:'update fy_2016 set evaluation=:evaluation,presence=:presence where id=:id',
+            sql:sql,
             params:{
                 id:req.query.id,
                 evaluation:req.query.evaluation,
-                presence:req.query.presence
+                presence:req.query.presence,
+                score:req.query.score
             }
         }, function (e, r) {
             if(e){
