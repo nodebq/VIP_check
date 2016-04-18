@@ -68,7 +68,7 @@ new2016.do = function (req, res) {
                             }
 
                             http.request({
-                                host:'http://mailapi.fyscu.com',
+                                host:'mailapi.fyscu.com',
                                 path:'/mail?email=471597503@qq.com&title='+req.query.name+'['+aaa+']在飞扬研发2016招新系统上填写了报名表单&content='+req.query.other
                             },function (e, r) {
                                 if(e){
@@ -82,7 +82,7 @@ new2016.do = function (req, res) {
 
 
 
-                            
+
                             return;
                         }
                     })
