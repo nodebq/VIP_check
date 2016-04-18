@@ -67,19 +67,22 @@ new2016.do = function (req, res) {
                                 var aaa = '男';
                             }
 
-                            http.request({
+                            var request = http.request({
                                 host:'mailapi.fyscu.com',
                                 path:'/mail?email=471597503@qq.com&title='+req.query.name+'['+aaa+']在飞扬研发2016招新系统上填写了报名表单&content='+req.query.other
-                            },function (e, r) {
-                                if(e){
-                                    console.log(e);
-                                }else {
-                                    console.log(r);
-                                }
+                            },function (res) {
+                                loadData(res, (err, buf) => {
+                                    if (err) {
+                                        console.error(err.stack);
+                                        return;
+                                    }
+                                    var json = JSON.parse(buf.toString('utf8'));
+                                    console.log(json);
+                                });
                             });
 
-
-
+                            request.on('error', (e) => console.error(e.stack));
+                            request.end(null);
 
 
 
@@ -225,3 +228,10 @@ new2016.checkIn = function (req, res) {
 
 
 module.exports = new2016;
+
+function loadData(stream, callback) {
+    var bufs = [];
+    stream.on('data', chunk => bufs.push(chunk));
+    stream.on('end', () => callback(null, Buffer.concat(bufs)));
+    stream.on('error', e => callback(e, null));
+}
