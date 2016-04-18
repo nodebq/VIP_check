@@ -2,6 +2,7 @@ var fyscu = require('../libs/fyscu.js');
 var code = require('../libs/code.js');
 var conn = require('../libs/mysql.js');
 var config = require('../config.js');
+var http = require('http');
 
 
 var new2016 = {
@@ -57,6 +58,31 @@ new2016.do = function (req, res) {
                         }else {
                             console.log('success');
                             res.end(fyscu.out(code.success));
+                            //调用通知接口
+
+
+                            if(req.query.gender == 0){
+                                var aaa = '女';
+                            }else {
+                                var aaa = '男';
+                            }
+
+                            http.request({
+                                host:'http://mailapi.fyscu.com',
+                                path:'/mail?email=471597503@qq.com&title='+req.query.name+'['+aaa+']在飞扬研发2016招新系统上填写了报名表单&content='+req.query.other
+                            },function (e, r) {
+                                if(e){
+                                    console.log(e);
+                                }else {
+                                    console.log(r);
+                                }
+                            });
+
+
+
+
+
+                            
                             return;
                         }
                     })
