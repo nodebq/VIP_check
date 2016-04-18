@@ -3,6 +3,7 @@ var code = require('../libs/code.js');
 var conn = require('../libs/mysql.js');
 var config = require('../config.js');
 var http = require('http');
+var querystring = require('querystring');
 
 
 var new2016 = {
@@ -69,7 +70,11 @@ new2016.do = function (req, res) {
 
                             var request = http.request({
                                 host:'mailapi.fyscu.com',
-                                path:'/mail?email=471597503@qq.com&title='+req.query.name+'['+aaa+']在飞扬研发2016招新系统上填写了报名表单&content='+req.query.other
+                                path:'/mail?' + querystring.stringify({
+                                    email: 'email=471597503@qq.com',
+                                    title: req.query.name + `[${aaa}]在飞扬研发2016招新系统上填写了报名表单`,
+                                    content: req.query.other
+                                })
                             },function (res) {
                                 loadData(res, (err, buf) => {
                                     if (err) {
