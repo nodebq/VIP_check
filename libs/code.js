@@ -16,7 +16,7 @@ var code = {
         code: 1003,
         message: "参数错误"
     },
-    'requsetError': {
+    'requestError': {
         code: 1004,
         message: "请求错误"
     },
@@ -26,15 +26,15 @@ var code = {
     },
     'loginError': {
         code: 2001,
-        message: "并未获取授权"
+        message: "你还没有登陆"
     },
-    'loginNotFinished': {
-        code: 2002,
-        message: "有一些重要信息还没有载入完成"
+    'unauthorizedOperation':{
+        code:2002,
+        message:'未经授权的操作'
     },
     '404NotFound': {
         code: 2003,
-        message: "没有找到这个人"
+        message: "没有找到资源"
     },
     'updateNotChanged': {
         code: 2004,
@@ -59,8 +59,11 @@ var code = {
     'dataRedundancy':{
         code:2009,
         message:'表单数据重复'
+    },
+    'unCompleteInfo':{
+        code:2010,
+        message:'信息没有补全'
     }
-
 };
 
 var college = [

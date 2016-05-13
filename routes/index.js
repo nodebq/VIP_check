@@ -20,6 +20,10 @@ router.get('/', function(req, res) {//把主页指向会员验证
     res.render('index', { title: 'Express' });
 });
 
+router.get('/login',function (req, res) {////登陆接口
+    res.header("Access-Control-Allow-Origin", "*");
+    hrms.login(req,res);
+});
 
 router.get('/check', function (req, res) {//会员验证接口
     res.header("Access-Control-Allow-Origin", "*");
