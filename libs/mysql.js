@@ -1,4 +1,5 @@
-var Client = require('easymysql');
+//var Client = require('easymysql');
+var Client = require('fy-mysql');
 var config = require('../config.js');
 var conn1 = null;
 var conn2 = null;
